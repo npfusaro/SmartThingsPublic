@@ -54,19 +54,19 @@ def checkCode(evt) {
             }
         case "3":
         	if(username3 != ""){
-        		sendPush "Door unlocked by ${username2}"
+        		sendPush "Door unlocked by ${username3}"
             }
         case "4":
         	if(username4 != ""){
-        		sendPush "Door unlocked by ${username2}"
+        		sendPush "Door unlocked by ${username4}"
             }
         case "5":
         	if(username5 != ""){
-        		sendPush "Door unlocked by ${username2}"
+        		sendPush "Door unlocked by ${username5}"
             }
         case "6":
         	if(username6 != ""){
-        		sendPush "Door unlocked by ${username2}"
+        		sendPush "Door unlocked by ${username6}"
             }        
        
         }     
