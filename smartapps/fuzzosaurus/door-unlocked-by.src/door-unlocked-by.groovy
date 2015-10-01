@@ -1,5 +1,5 @@
 /**
- *  Door Unlock code
+ *  Door Unlock By
  *
  *  
  *
@@ -43,32 +43,42 @@ def checkCode(evt) {
     if(evt.value == "unlocked" && evt.data) {
     
     	def lockData = new JsonSlurper().parseText(evt.data)
-        switch( lockData ){
-        case "1": 
-        	if(username1 != ""){
-        		sendPush "Door unlocked by ${username1}"
+     
+         
+	    switch( lockData.usedCode ){
+        case 1: 
+        	if(username1 != null ){
+        		sendPush "Door unlocked by $username1"
+                break
             }
-        case "2":
-        	if(username2 != ""){
-        		sendPush "Door unlocked by ${username2}"
+        case 2:
+        	if(username2 != null ){
+        		sendPush "Door unlocked by $username2"
+                break
             }
-        case "3":
-        	if(username3 != ""){
-        		sendPush "Door unlocked by ${username3}"
+        case 3:
+        	if(username3 != null ){
+        		sendPush "Door unlocked by $username3"
+                break
             }
-        case "4":
-        	if(username4 != ""){
-        		sendPush "Door unlocked by ${username4}"
+        case 4:
+        	if(username4 != null ){
+        		sendPush "Door unlocked by $username4"
+                break
             }
-        case "5":
-        	if(username5 != ""){
-        		sendPush "Door unlocked by ${username5}"
+        case 5:
+        	if(username5 != null ){
+        		sendPush "Door unlocked by $username5"
+                break
             }
-        case "6":
-        	if(username6 != ""){
-        		sendPush "Door unlocked by ${username6}"
-            }        
+        case 6:
+        	if(username6 != null ){
+        		sendPush "Door unlocked by $username6"
+                break 
+            } 
+            lock1.refresh
        
-        }     
+        }    
+         
     }
 }
