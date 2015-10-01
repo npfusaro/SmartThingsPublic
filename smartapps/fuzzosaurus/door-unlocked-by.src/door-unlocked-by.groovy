@@ -75,10 +75,8 @@ def checkCode(evt) {
         	if(username6 != null ){
         		sendPush "Door unlocked by $username6"
                 break 
-            } 
-            lock1.refresh
-       
+            }
         }    
-         
+            runIn( 10, lock1.refresh() ) //Checks lock status to see if relocked. 
     }
 }
